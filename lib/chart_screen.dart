@@ -4,14 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:charts_flutter/flutter.dart' as charts;
 
-class ChartScreen extends StatelessWidget {
+class ChartScreen extends StatefulWidget {
+  
+  _ChartScreenState createState() => _ChartScreenState();
+}
+
+class _ChartScreenState extends State<ChartScreen> {
   List<charts.Series<PieData, String>> seriesList;
+
    List<PieData> dataList = [];
 
+ 
   countriesData() async {
 
-    seriesList.clear();
-    dataList.clear();
+    
     print("object");
     final url = 'https://corona.lmao.ninja/countries';
     var response = await http.get(url);
@@ -56,6 +62,12 @@ class ChartScreen extends StatelessWidget {
     print("series data ${seriesList.length}");
 
     return true;
+  }
+
+  void dispose(){
+     seriesList.clear();
+     dataList.clear();
+    super.dispose();
   }
 
   Widget build(BuildContext context) {
