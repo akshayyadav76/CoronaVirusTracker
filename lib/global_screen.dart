@@ -26,23 +26,23 @@ class GlobalScreen extends StatelessWidget {
                 children: <Widget>[
                   Card(
                     child: ListTile(
-                      leading: Icon(Icons.card_membership),
-                      title: Text(" Total Cases"),
-                      trailing: Text("${data.data["cases"]}"),
+                      leading: Icon(Icons.card_membership,size: 40,),
+                      title: Text(" Total Cases" ,style: Theme.of(context).textTheme.title,),
+                      trailing: FittedBox(child: Text("${data.data["cases"]}",style: Theme.of(context).textTheme.title,)),
                     ),
                   ),
                   Card(
                                       child: ListTile(
-                      leading: Icon(Icons.card_membership),
-                      title: Text(" Total Deaths"),
-                       trailing: Text("${data.data["deaths"]}"),
+                      leading: Icon(Icons.directions_walk,size: 40,),
+                      title: Text(" Total Deaths",style: Theme.of(context).textTheme.title,),
+                       trailing: Text("${data.data["deaths"]}",style: Theme.of(context).textTheme.title,),
                     ),
                   ),
                   Card(
                                       child: ListTile(
-                      leading: Icon(Icons.card_membership),
-                      title: Text(" Total Recovered"),
-                      trailing: Text("${data.data["recovered"]}"),
+                      leading: Icon(Icons.record_voice_over,size: 40,),
+                      title: FittedBox(child: Text(" Total Recovered",style: Theme.of(context).textTheme.title,)),
+                      trailing: Text("${data.data["recovered"]}",style: Theme.of(context).textTheme.title,),
                     ),
                   ),
                 ],

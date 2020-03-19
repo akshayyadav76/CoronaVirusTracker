@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './global_screen.dart';
 import './counters_screen.dart';
+import './chart_screen.dart';
 
 class DashBoardScreen extends StatefulWidget {
 
@@ -15,7 +16,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
 
   List<Widget> widgetsList =[
     GlobalScreen(),
-    CounterisScreen()
+    CounterisScreen(),
+    ChartScreen()
   ];
 
   Widget build(BuildContext context) {
@@ -40,6 +42,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
              BottomNavigationBarItem(
             icon: Icon(Icons.flag),
             title: Center(child: Text("Counteris")), ),
+
+            BottomNavigationBarItem(
+            icon: Icon(Icons.chat_bubble_outline),
+            title: Center(child: Text("Chart")), ),
         ],
         onTap: (num){
            setState(() {
