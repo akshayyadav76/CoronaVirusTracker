@@ -1,10 +1,12 @@
-# coronavirus_tracker
+# Corona Virus Tracker
 
-A new Flutter project.
+Live Feed of Corona Virus World Wide...
+
+<img src="/app screen/dashboard.png" width="200" height="300"></img>
+
 
 ## Getting Started
-**
-This project is a starting point for a Flutter application.
+**This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
